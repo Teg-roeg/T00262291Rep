@@ -321,6 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c838e2291e2b3fb469a4974e16444c5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knifeCloneTemplate: {fileID: 2422401821285331589, guid: f967892ee5bdd2246ad8e0327e6b21ba, type: 3}
 --- !u!1 &67200340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1297,8 +1298,8 @@ Transform:
   m_GameObject: {fileID: 1418196356}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.76803, y: 2.6124237, z: 0.0040052147}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 2.768, y: 2.6124237, z: 0.004005}
+  m_LocalScale: {x: 48.127625, y: 1, z: 152.43953}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1617,7 +1618,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2026253923361274161, guid: f967892ee5bdd2246ad8e0327e6b21ba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.3
+      value: 11.01
       objectReference: {fileID: 0}
     - target: {fileID: 2026253923361274161, guid: f967892ee5bdd2246ad8e0327e6b21ba, type: 3}
       propertyPath: m_LocalPosition.y
