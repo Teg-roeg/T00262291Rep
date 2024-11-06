@@ -5,10 +5,11 @@ using UnityEngine.Windows.Speech;
 
 public class fpshooter : MonoBehaviour
 {
+    public GameObject knifeCloneTemplate;
     float speed = 3;// Start is called before the first frame update 
     void Start()
     {
-        
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
@@ -16,10 +17,15 @@ public class fpshooter : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W))
         {
+            Vector3 fpsMovementDit = new Vector3(transform.forward.x, 0, transform.forward.z);
+            fpsMovementDit.Normalize();
             transform.position += speed * transform.forward * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.S))
         {
+
+            Vector3 fpsMovementDit = new Vector3(transform.forward.x, 0, transform.forward.z);
+            fpsMovementDit.Normalize();
             transform.position -= speed * transform.forward * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.A))
@@ -30,7 +36,12 @@ public class fpshooter : MonoBehaviour
         {
             transform.position += speed * transform.right * Time.deltaTime;
         }
-        transform.Rotate(Vector3.up, Input.GetAxis("Horizontal"));
-        transform.Rotate(Vector3.right, Input.GetAxis("Vertical"));
+        transform.Rotate(Vector3.up, Input.GetAxis("Horizontal"), Space.World);
+        transform.Rotate(transform.right, Input.GetAxis("Vertical"), Space.World);
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Instantiate(knifeCloneTemplate, transform.position, transform.rotation);
+        }
     }
 }
