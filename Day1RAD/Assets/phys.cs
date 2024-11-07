@@ -16,7 +16,7 @@ public class phys : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            rb.AddForce(new Vector3(0, 2, 0), ForceMode.Impulse);
+            rb.AddForce(new Vector3(0, 1, 0), ForceMode.Impulse);
 
         }
     }
