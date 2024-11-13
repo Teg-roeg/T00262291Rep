@@ -40,21 +40,20 @@ public class fpshooter : MonoBehaviour
         {
             transform.position += speed * transform.right * Time.deltaTime;
         }
-//        transform.Rotate(Vector3.up, Input.GetAxis("Horizontal"), Space.World);
-//       transform.Rotate(transform.right, Input.GetAxis("Vertical"), Space.World);
 
-        if (lastFired > cooldown)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                Instantiate(knifeCloneTemplate, transform.position, transform.rotation);
-                lastFired = 0;
-            }
-        }
-        else
-        {
-            lastFired += Time.deltaTime;
-        }
+
+        //  if (lastFired > cooldown)
+        // {
+        //      if (Input.GetMouseButtonDown(0))
+        //      {
+        //          Instantiate(knifeCloneTemplate, transform.position, transform.rotation);
+        //          lastFired = 0;
+        //      }
+        //  }
+        //  else
+        //  {
+        //      lastFired += Time.deltaTime;
+        //  }
 
 
     }
